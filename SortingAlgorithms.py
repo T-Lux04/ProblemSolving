@@ -16,7 +16,18 @@ def SelectionAlgorithm(nums):
                 tempNum = nums[min_index]
                 nums[min_index] = nums[j]
                 nums[j] = tempNum
-    return nums        
-print(SelectionAlgorithm(nums = [2,4,3,1]))
+    return nums
+
+def InsertionSort(nums):
+    for i in range(1, len(nums)):
+        key = nums[i]
+        j = i -1
+        while j>=0 and nums[j]>key:
+            nums[j+1] = nums[j]
+            j=j-1
+        nums[j+1] = key
+    return nums
+
+print(InsertionSort(nums = [2,4,3,1,5]))
 
 
